@@ -1,2 +1,4 @@
-package com.example.kskapp.repo;public class repo {
+package com.example.kskapp.repo;
+
+public class Repo {
 }

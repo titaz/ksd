@@ -7,14 +7,17 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.kskapp.FirstFragment.FirstFragmentViewModel;
 import com.example.kskapp.R;
 import com.example.kskapp.databinding.FragmentSecondBinding;
 
 public class SecondFragment extends Fragment {
 
     private FragmentSecondBinding binding;
+    private SecondFragmentViewModel model;
 
     @Override
     public View onCreateView(
@@ -29,6 +32,8 @@ public class SecondFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        model = new ViewModelProvider(this).get(SecondFragmentViewModel.class);
 
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override
